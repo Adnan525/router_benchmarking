@@ -20,17 +20,17 @@ from GatePredictor import GatePredictor
 VAL_PATHS = ["data/k3/validation.csv", 
             "data/k5/validation.csv",
             "data/k8/validation.csv",
-            # "data/k10/validation.csv"
+            "data/k10/validation.csv"
             ]
 
 DATA_PATHS =["data/k3/test.csv", 
             "data/k5/test.csv",
             "data/k8/test.csv",
-            # "data/k10/test.csv"
+            "data/k10/test.csv"
             ]
 
-# CUTOFFS = [1.5, 1.75, 2.0, 2.25, 2.5]
-CUTOFFS = [2.5]
+CUTOFFS = [1.5, 1.75, 2.0, 2.25, 2.5]
+# CUTOFFS = [2.5]
 
 for val_path, data_path in zip(VAL_PATHS, DATA_PATHS):
 
@@ -41,3 +41,4 @@ for val_path, data_path in zip(VAL_PATHS, DATA_PATHS):
     print(f"tau = {gate.tau:.3f}, cut-off = {gate.cutoff:.2f}")
     print(f"general vs specialist accuracy : {gate_accuracy:.4f}")
     print(f"real routing accuracy          : {real_accuracy:.4f}")
+    print("=" * 50)
